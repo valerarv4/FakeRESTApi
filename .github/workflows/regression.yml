@@ -1,0 +1,58 @@
+name: Regression run
+
+on:
+  workflow_dispatch:
+    inputs:
+      env:
+        description: 'Environment to run regression'
+        required: true
+        default: 'dev'
+        type: choice
+        options:
+          - dev
+  
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: ☕ Set up Java 24
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '24'
+
+      - name: Cache Maven packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-maven-
+
+      - name: Create dev config
+        if: ${{ github.event.inputs.env == 'dev' }}
+        run: |
+          mkdir -p ./src/main/resources/configs
+          echo "${{ secrets.DEV_PROPERTIES }}" > ./src/main/resources/configs/dev.properties
+
+      - name: Run TestNG regression suite
+        run: |
+          mvn test -DsuiteXmlFile=suites/regression.xml \
+                         -Denv=${{ github.event.inputs.env }} \
+                         -DapiVersion=1 \
+                         -DthreadCount=3
+        continue-on-error: true
+
+      - name: Generate Allure report
+        run: mvn allure:report
+
+      - name: Deploy Allure report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: target/allure-report
+          force_orphan: true
