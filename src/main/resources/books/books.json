@@ -1,0 +1,89 @@
+[
+  {
+    "id": 1,
+    "title": "Book 1",
+    "description": "Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\n",
+    "pageCount": 100,
+    "excerpt": "Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\n",
+    "publishDate": "2025-06-25T11:16:08.8383486+00:00",
+    "authors": [
+      {
+        "id": 1,
+        "firstName": "First Name 1",
+        "lastName": "Last Name 1"
+      },
+      {
+        "id": 2,
+        "firstName": "First Name 2",
+        "lastName": "Last Name 2"
+      },
+      {
+        "id": 3,
+        "idBook": 1,
+        "firstName": "First Name 3",
+        "lastName": "Last Name 3"
+      },
+      {
+        "id": 4,
+        "idBook": 1,
+        "firstName": "First Name 4",
+        "lastName": "Last Name 4"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Book 2",
+    "description": "Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\n",
+    "pageCount": 200,
+    "excerpt": "Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\n",
+    "publishDate": "2025-06-24T11:16:08.8383665+00:00",
+    "authors": [
+      {
+        "id": 3,
+        "firstName": "First Name 3",
+        "lastName": "Last Name 3"
+      },
+      {
+        "id": 4,
+        "firstName": "First Name 4",
+        "lastName": "Last Name 4"
+      },
+      {
+        "id": 5,
+        "firstName": "First Name 5",
+        "lastName": "Last Name 5"
+      },
+      {
+        "id": 6,
+        "firstName": "First Name 6",
+        "lastName": "Last Name 6"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Book 3",
+    "description": "Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\n",
+    "pageCount": 300,
+    "excerpt": "Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\n",
+    "publishDate": "2025-06-23T11:16:08.8383797+00:00",
+    "authors": [
+      {
+        "id": 7,
+        "firstName": "First Name 7",
+        "lastName": "Last Name 7"
+      },
+      {
+        "id": 8,
+        "firstName": "First Name 8",
+        "lastName": "Last Name 8"
+      },
+      {
+        "id": 9,
+        "firstName": "First Name 9",
+        "lastName": "Last Name 9"
+      }
+    ]
+  }
+]

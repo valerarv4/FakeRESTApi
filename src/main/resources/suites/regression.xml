@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Regression run">
+
+    <test name="Book tests">
+        <packages>
+            <package name="net.azurewebsites.fakerestapi.books.*"/>
+        </packages>
+    </test>
+
+    <test name="Author tests">
+        <packages>
+            <package name="net.azurewebsites.fakerestapi.authors.*"/>
+        </packages>
+    </test>
+</suite>
